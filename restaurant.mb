@@ -1,0 +1,16 @@
+# Restaurant Application Spec
+
+## Target
+- There are three positions in the restaurant: Casher, Waiter, Cook.
+- The restaurant only allows Customer that aren't vagan to access.
+- Each position has their own job, they are not allowed to do others' jobs:
+  - Casher:
+    1. Calculate the orders price and charge customers.
+    2. Calculate the income and reply to the Application
+  - Waiter:
+    1. Take customer order and send them to the kitchen.
+    2. Serve the dishes to customers when cooks cooked the dishes.
+  - Cook:
+    1. Preparing ingredients and Cooking.
+- Finish all customers' order after running the Application.
+- Provide a interface to calculate and show the income.
