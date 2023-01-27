@@ -4,16 +4,16 @@ RSpec.describe App do
   let(:app) { App.new(options) }
 
   describe "#run" do
-    let(:pending_order) { double("Order", status: "pending") }
-    let(:completed_order) { double("Order", status: "completed") }
+    let(:pending_order) { Order.new }
     let(:options) do
       {
-        orders: [pending_order, completed_order]
+        orders: [pending_order, pending_order]
       }
     end
 
     it "finishes all orders" do
-      completed_order_count = app.orders.find_all { |order| order.status == "completed" }
+      app.run
+      completed_order_count = app.orders.find_all { |order| order.state == "completed" }
       expect(completed_order_count.size).to eq(2)
     end
 

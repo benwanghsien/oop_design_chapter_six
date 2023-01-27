@@ -3,7 +3,7 @@
 ## Target
 - There are three positions in the restaurant: Casher, Waiter, Cook.
 - The restaurant only allows Customer that aren't vagan to access.
-- Each position has their own job, they are not allowed to do others' jobs:
+- Each position has its own job; they are not allowed to do others' jobs:
   - Casher:
     1. Calculate the orders price and charge customers.
     2. Calculate the income and reply to the Application

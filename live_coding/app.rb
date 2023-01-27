@@ -1,5 +1,5 @@
 require "pry"
-require "./live_coding/stuff"
+require "./live_coding/order"
 
 class App
   attr_reader :orders
@@ -9,12 +9,13 @@ class App
   end
 
   def run
+    @orders.each { |order| order.state = "completed" }
     {status: finished?}
   end
 
   private
 
   def finished?
-    orders.find { |order| order.status == "pending" }.nil?
+    orders.reject { |order| order.state == "completed" }.empty?
   end
 end
